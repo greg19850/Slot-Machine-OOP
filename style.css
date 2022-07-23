@@ -1,0 +1,66 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+}
+
+h1{
+  font-size: 46px;
+  padding: 20px;
+}
+.game {
+  display: flex;
+  justify-content: center;
+
+}
+
+.color{
+  width: 250px;
+  height: 300px;
+  margin: 20px;
+  background-color: gray;
+}
+
+#bid{
+  font-size: 25px;
+  text-align: center;
+  margin: 20px;
+  padding: 5px;
+  border: 2px solid #000;
+}
+
+.play{
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.account{
+  margin: 30px;
+  font-size: 26px;
+}
+
+.summary{
+  font-size: 24px;
+}
+
+.summary div{
+  margin: 5px;
+}
+
+.wallet,.games,.wins,.losses{
+  font-weight: bold;
+}
