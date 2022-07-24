@@ -24,3 +24,17 @@ class Wallet {
     };
   }
 }
+
+class Statistics {
+  constructor() {
+    this.results = [];
+  }
+  addGameToResults(bidValue, win) {
+    let game = {
+      bidValue,
+      win,
+    };
+
+    this.results.push(game);
+  }
+}
