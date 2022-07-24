@@ -37,4 +37,12 @@ class Statistics {
 
     this.results.push(game);
   }
+
+  showGameStatistics() {
+    let games = this.results.length;
+    let wins = this.results.filter((result) => result.win).length;
+    let losses = games - wins;
+
+    return [games, wins, losses];
+  }
 }
