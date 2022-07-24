@@ -46,3 +46,20 @@ class Statistics {
     return [games, wins, losses];
   }
 }
+
+class Draw {
+  constructor() {
+    this.options = ['red', 'green', 'blue'];
+    let _drawResult = this.drawResult();
+    this.GetDrawResult = () => _drawResult;
+  }
+
+  drawResult() {
+    let colors = [];
+    for (let i = 0; i < this.options.length; i++) {
+      let index = Math.floor(Math.random() * this.options.length);
+      colors.push(this.options[index]);
+    }
+    return colors;
+  }
+}
