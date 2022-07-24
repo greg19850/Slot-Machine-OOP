@@ -63,3 +63,19 @@ class Draw {
     return colors;
   }
 }
+
+class Result {
+  static moneyWon(result, bidValue) {
+    if (result) return 3 * bidValue;
+    else return 0;
+  }
+
+  static checkResult(draw) {
+    if (
+      (draw[0] === draw[1] && draw[1] === draw[2]) ||
+      (draw[0] !== draw[1] && draw[1] !== draw[2] && draw[0] !== draw[2])
+    ) {
+      return true;
+    } else return false;
+  }
+}
