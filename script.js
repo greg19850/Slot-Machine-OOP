@@ -82,15 +82,15 @@ class Result {
 
 class Game {
   constructor() {
-    const stats = new Statistics();
-    const wallet = new Wallet(200);
-    const colorBoards = document.querySelectorAll('.game .color');
-    const bidInput = document.getElementById('bid');
-    const moneyDisplay = document.querySelector('.account .wallet');
-    const resultDisplay = document.querySelector('.summary .result');
-    const gamesDisplay = document.querySelector('.summary .games');
-    const winsDisplay = document.querySelector('.summary .wins');
-    const lossesDisplay = document.querySelector('.summary .losses');
+    this.stats = new Statistics();
+    this.wallet = new Wallet(200);
+    this.colorBoards = document.querySelectorAll('.game .color');
+    this.bidInput = document.getElementById('bid');
+    this.moneyDisplay = document.querySelector('.account .wallet');
+    this.resultDisplay = document.querySelector('.summary .result');
+    this.gamesDisplay = document.querySelector('.summary .games');
+    this.winsDisplay = document.querySelector('.summary .wins');
+    this.lossesDisplay = document.querySelector('.summary .losses');
     document.querySelector('.play').addEventListener('click', this.startGame);
   }
 
@@ -98,3 +98,5 @@ class Game {
 
   startGame() {}
 }
+
+const game = new Game();
