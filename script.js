@@ -123,6 +123,11 @@ class Game {
 
   startGame() {
     if (this.bidInput.value < 1) return alert('Minimum bid of 1 required!');
+    const bid = Math.floor(this.bidInput.value);
+
+    if (!this.wallet.checkFundsToPlay(bid)) {
+      return alert('You have insufficient funds to place this bid');
+    }
   }
 }
 
