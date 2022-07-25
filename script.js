@@ -81,9 +81,9 @@ class Result {
 }
 
 class Game {
-  constructor() {
+  constructor(walletStart) {
     this.stats = new Statistics();
-    this.wallet = new Wallet(200);
+    this.wallet = new Wallet(walletStart);
     this.colorBoards = document.querySelectorAll('.game .color');
     this.bidInput = document.getElementById('bid');
     this.moneyDisplay = document.querySelector('.account .wallet');
@@ -92,11 +92,34 @@ class Game {
     this.winsDisplay = document.querySelector('.summary .wins');
     this.lossesDisplay = document.querySelector('.summary .losses');
     document.querySelector('.play').addEventListener('click', this.startGame);
+
+    this.render();
   }
 
-  render() {}
+  render(
+    colors = ['gray', 'gray', 'gray'],
+    money = this.wallet.getWalletValue(),
+    gameResult = '',
+    stats = [0, 0, 0],
+    bid = 0,
+    wonMoney = 0
+  ) {
+    this.colorBoards.forEach((board, i) => {
+      board.style.backgroundColor = colors[i];
+    });
+    this.moneyDisplay.textContent = money;
+    if (gameResult) {
+      gameResult = `You Won ${wonMoney}!!`;
+    } else if (!gameResult && gameResult !== '') {
+      gameResult = `You lost ${bid}`;
+    }
+    this.resultDisplay.textContent = gameResult;
+    this.gamesDisplay.textContent = stats[0];
+    this.winsDisplay.textContent = stats[1];
+    this.lossesDisplay.textContent = stats[2];
+  }
 
   startGame() {}
 }
 
-const game = new Game();
+const game = new Game(200);
