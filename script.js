@@ -136,6 +136,17 @@ class Game {
     const moneyWon = Result.moneyWon(win, bid);
     this.wallet.changeWallet(moneyWon);
     this.stats.addGameToStatistics(bid, win);
+
+    this.render(
+      colors,
+      this.wallet.getWalletValue(),
+      win,
+      this.stats.showGameStatistics(),
+      bid,
+      moneyWon
+    );
+
+    this.bidInput.value = '';
   }
 }
 
