@@ -91,7 +91,9 @@ class Game {
     this.gamesDisplay = document.querySelector('.summary .games');
     this.winsDisplay = document.querySelector('.summary .wins');
     this.lossesDisplay = document.querySelector('.summary .losses');
-    document.querySelector('.play').addEventListener('click', this.startGame);
+    document
+      .querySelector('.play')
+      .addEventListener('click', this.startGame.bind(this));
 
     this.render();
   }
@@ -119,7 +121,9 @@ class Game {
     this.lossesDisplay.textContent = stats[2];
   }
 
-  startGame() {}
+  startGame() {
+    if (this.bidInput.value < 1) return alert('Minimum bid of 1 required!');
+  }
 }
 
 const game = new Game(200);
