@@ -79,3 +79,22 @@ class Result {
     } else return false;
   }
 }
+
+class Game {
+  constructor() {
+    const stats = new Statistics();
+    const wallet = new Wallet(200);
+    const colorBoards = document.querySelectorAll('.game .color');
+    const bidInput = document.getElementById('bid');
+    const moneyDisplay = document.querySelector('.account .wallet');
+    const resultDisplay = document.querySelector('.summary .result');
+    const gamesDisplay = document.querySelector('.summary .games');
+    const winsDisplay = document.querySelector('.summary .wins');
+    const lossesDisplay = document.querySelector('.summary .losses');
+    document.querySelector('.play').addEventListener('click', this.startGame);
+  }
+
+  render() {}
+
+  startGame() {}
+}
