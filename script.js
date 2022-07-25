@@ -128,6 +128,12 @@ class Game {
     if (!this.wallet.checkFundsToPlay(bid)) {
       return alert('You have insufficient funds to place this bid');
     }
+
+    this.wallet.changeWallet(bid, '-');
+    this.draw = new Draw();
+    const colors = game.draw.GetDrawResult();
+    const win = Result.checkResult(colors);
+    const moneyWon = Result.moneyWon(win, bid);
   }
 }
 
