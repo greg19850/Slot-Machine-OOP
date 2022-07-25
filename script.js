@@ -29,7 +29,7 @@ class Statistics {
   constructor() {
     this.results = [];
   }
-  addGameToResults(bidValue, win) {
+  addGameToStatistics(bidValue, win) {
     let game = {
       bidValue,
       win,
@@ -134,6 +134,8 @@ class Game {
     const colors = game.draw.GetDrawResult();
     const win = Result.checkResult(colors);
     const moneyWon = Result.moneyWon(win, bid);
+    this.wallet.changeWallet(moneyWon);
+    this.stats.addGameToStatistics(bid, win);
   }
 }
 
