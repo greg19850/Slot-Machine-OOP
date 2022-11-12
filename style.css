@@ -1,36 +1,40 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #16213E;
+  color: #fff;
 }
-.container{
+
+.container {
   width: 80%;
   text-align: center;
   margin: 20px auto;
 }
 
-h1{
+h1 {
   font-size: 46px;
   padding: 20px;
 }
+
 .game {
   display: flex;
   justify-content: center;
 
 }
 
-.color{
+.color {
   width: 250px;
   height: 300px;
   margin: 20px;
   border: 2px solid #000;
 }
 
-#bid{
+#bid {
   font-size: 25px;
   text-align: center;
   margin: 20px;
@@ -38,7 +42,7 @@ h1{
   border: 2px solid #000;
 }
 
-.play{
+.play {
   display: block;
   margin: 20px auto;
   padding: 10px;
@@ -48,24 +52,27 @@ h1{
   border: 2px solid #000;
 }
 
-.account{
+.account {
   margin: 30px;
   font-size: 26px;
 }
 
-.summary{
+.summary {
   font-size: 24px;
 }
 
-.summary div{
+.summary div {
   margin: 5px;
 }
 
-.summary .result{
+.summary .result {
   margin: 20px;
   font-weight: bold;
 }
 
-.wallet,.games,.wins,.losses{
+.wallet,
+.games,
+.wins,
+.losses {
   font-weight: bold;
 }
